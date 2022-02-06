@@ -853,6 +853,7 @@ img {
 
 .icon-cross {
   fill: var(--text-color);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .cross:hover .icon-cross {
@@ -945,6 +946,8 @@ textarea {
 
   color: currentColor;
   outline: none;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
 
 .modal-form-comment::placeholder {
@@ -977,14 +980,6 @@ textarea {
   -moz-appearance: none;
   appearance: none;
 }
-
-/* .form-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  margin-top: 20px;
-  margin-bottom: 30px;
-} */
 
 .modal-checkbox-link {
   color: var(--brand-color);
