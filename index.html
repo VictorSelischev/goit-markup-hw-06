@@ -606,13 +606,24 @@
             ></textarea>
           </div>
 
-          <div class="form-checkbox">
-            <input type="checkbox" name="contract" value="yes" id="check" class="modal-checkbox" />
-            <label for="check" class="modal-checkbox-text"
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="" class="modal-checkbox-link">Условия договора</a></label
-            >
-          </div>
+          <!-- <div class="form-checkbox"> -->
+            <label for="check" class="modal-checkbox-text">
+              <input
+                type="checkbox"
+                name="contract"
+                value="yes"
+                id="check"
+                class="modal-checkbox"
+              />
+              <span class="modal-icon-check">
+                <svg width="11" height="8" class="modal-icon-checkbox">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
+              </span>
+              Соглашаюсь с рассылкой и принимаю&nbsp; 
+              <a href="" class="modal-checkbox-link">Условия договора</a>
+            </label>
+          <!-- </div> -->
           <button type="submit" class="modal-form-button button">Отправить</button>
         </form>
       </div>
