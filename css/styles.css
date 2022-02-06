@@ -906,8 +906,25 @@ img {
   line-height: 1.17;
   letter-spacing: 0.01em;
 
-  color: currentColor;
+  outline: none;
+
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
 }
+
+.modal-form-input:focus,
+.modal-form-comment:focus {
+  border-color: var(--brand-color);
+}
+
+/* .modal-form-input:focus:placeholder-shown,
+.modal-form-comment:focus:placeholder-shown {
+  border-color: var(--brand-color);
+} */
+
+/* .modal-form-input:not(:placeholder-shown),
+.modal-form-comment:not(:placeholder-shown) {
+  border-color: var(--brand-color);
+} */
 
 textarea {
   resize: none;
@@ -926,22 +943,10 @@ textarea {
   letter-spacing: 0.01em;
 
   color: currentColor;
+  outline: none;
 }
 
-::-webkit-input-placeholder {
-  /* WebKit browsers */
-  color: rgba(117, 117, 117, 0.5);
-}
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: rgba(117, 117, 117, 0.5);
-}
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: rgba(117, 117, 117, 0.5) d;
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
+.modal-form-comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -950,7 +955,7 @@ textarea {
   margin: 0 auto;
 }
 
-.modal-checkbox {
+.modal-checkbox[type='checkbox'] {
   visibility: hidden;
 }
 
@@ -978,4 +983,8 @@ textarea {
   top: 11px;
 
   fill: currentColor;
+}
+
+.modal-form-input:focus + .icon-modal {
+  fill: var(--brand-color);
 }
