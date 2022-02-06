@@ -327,12 +327,13 @@ img {
   line-height: 1.25;
 
   color: rgba(255, 255, 255, 0.6);
+  outline: none;
 }
 
 .icon-send {
-  fill: currentColor;
-
   margin-left: 10px;
+
+  fill: currentColor;
 }
 
 .button-flex {
